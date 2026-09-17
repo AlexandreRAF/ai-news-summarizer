@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="report.css">
+</head>
+<body>
+  <main class="report">
+    <header class="report-header">
+      <div class="masthead">
+        <p class="publication" id="publication-name">News Observatory</p>
+      </div>
+      <p class="eyebrow" id="report-category">Macroeconomic overview</p>
+      <h1 id="report-title">The context behind the news.</h1>
+      <div class="report-description" id="report-description">
+      </div>
+      <dl class="metadata">
+        <div>
+          <dt>Reporting period</dt>
+          <dd id="report-period">[Start date] — [End date]</dd>
+        </div>
+        <div>
+          <dt>Generated on</dt>
+          <dd id="report-generated-at">[Date and time]</dd>
+        </div>
+        <div>
+          <dt>Model</dt>
+          <dd id="report-model">[Model used]</dd>
+        </div>
+      </dl>
+    </header>
+
+    <section class="report-section summary">
+      <p class="eyebrow">Essential reading</p>
+      <h2>Executive summary</h2>
+      <div class="prose" id="summary-content">
+      </div>
+    </section>
+
+    <div id="report-sections"></div>
+
+    <section class="report-section sources">
+      <h2 id="sources-title">Sources and references</h2>
+      <ol class="source-list" id="sources-list"></ol>
+    </section>
+
+    <footer class="report-footer">
+      <p id="footer-publication">[Publication name]</p>
+      <div id="footer-note"></div>
+    </footer>
+  </main>
+  
+  <script type='module' src='script.js'></script>
+</body>
+</html>

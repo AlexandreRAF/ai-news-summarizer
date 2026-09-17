@@ -1,0 +1,7 @@
+{
+    "feeds":[
+        "https://agenciadenoticias.ibge.gov.br/agencia-rss",
+        "https://apps.bea.gov/rss/rss.xml",
+        "https://www.eia.gov/rss/todayinenergy.xml"
+    ]
+}

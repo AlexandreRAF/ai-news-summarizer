@@ -1,0 +1,5 @@
+src/.env
+venv/
+src/__pycache__
+src/pdf_generator/__pycache__
+src/pdf_generator/temp/news.json

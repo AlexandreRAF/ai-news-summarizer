@@ -1,0 +1,235 @@
+:root {
+  color-scheme: light;
+  --muted: #5c6b73;
+  --accent: #17665f;
+  --line: #d7dfdc;
+  --tint: #eff5f2;
+  --paper: #ffffff;
+  --canvas: #e9eeeb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+  line-height: 1.65;
+}
+
+.report {
+  max-width: 210mm;
+  margin: 32px auto;
+  padding: 18mm;
+  background: var(--paper);
+  overflow-wrap: anywhere;
+}
+
+.report-header {
+  border-top: 4px solid var(--accent);
+  padding-top: 18px;
+  margin-bottom: 32px;
+}
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 36px;
+}
+
+.publication,
+.edition,
+.eyebrow {
+  margin: 0;
+  font-size: 9pt;
+}
+
+.publication,
+.eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.edition,
+.report-description,
+.metadata,
+.source-meta,
+.report-footer {
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  break-after: avoid;
+}
+
+h1 {
+  margin: 12px 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34pt;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20pt;
+  font-weight: 400;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 11pt;
+}
+
+p {
+  margin: 0 0 12px;
+  orphans: 3;
+  widows: 3;
+}
+
+.metadata {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 9pt;
+}
+
+.metadata dt {
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.metadata dd {
+  margin: 0;
+}
+
+.report-section {
+  margin-bottom: 28px;
+}
+
+.summary {
+  padding: 22px 24px;
+  border-left: 3px solid var(--accent);
+  background: var(--tint);
+}
+
+.summary .eyebrow {
+  margin-bottom: 10px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  break-after: avoid;
+}
+
+.section-number {
+  color: var(--accent);
+  font-size: 10pt;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.topic + .topic {
+  margin-top: 20px;
+}
+
+.prose > :last-child,
+.report-description > :last-child,
+.report-footer p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin: 0 0 12px;
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+  orphans: 3;
+  widows: 3;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sources {
+  padding-top: 24px;
+  border-top: 2px solid var(--accent);
+  font-size: 10pt;
+}
+
+.source-list {
+  margin-top: 16px;
+}
+
+.source-meta {
+  margin: 4px 0 0;
+  font-size: 9pt;
+}
+
+.report-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 8pt;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@page {
+  size: A4;
+  margin: 18mm;
+}
+
+@media print {
+  body {
+    background: var(--paper);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .report {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .metadata,
+  .section-heading {
+    break-inside: avoid;
+  }
+
+  /* Long sections and paragraphs remain free to flow across pages. */
+  .sources {
+    break-before: page;
+  }
+}

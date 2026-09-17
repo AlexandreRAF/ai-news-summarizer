@@ -1,0 +1,8 @@
+{
+    "document_presets": {
+        "language": "en",
+        "publication": "AI News Summarizer",
+        "category": "Macroeconomic overview",
+        "footer_text": ["AI may make mistakes - check the sources"]
+    }
+}
